@@ -41,7 +41,7 @@ def distanceHaversinePoints(p1_lat,p1_lng,p2_lat,p2_lng):
 def distanceHaversineVectors(p1_lat,p1_lng,p2_lat,p2_lng):
     distance=[]
     for i in np.arange(len(p1_lat)):
-        dis=distanceHaversinePoints(p1_lat[i],p1_lng[i],p2_lat[i],p2_lng[i])
+        dis=distanceHaversinePoints(p1_lat.iloc[i],p1_lng.iloc[i],p2_lat.iloc[i],p2_lng.iloc[i])
         distance.append(dis)
     return distance
 
