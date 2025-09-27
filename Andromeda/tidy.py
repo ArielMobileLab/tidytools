@@ -256,6 +256,7 @@ def tidy_gps(path):  # load json to gsp df
         df['CumulativeSpeedPWR2']=None    ## currently we don't need the Distance_Driven the columns is added for
         df['CumulativeDistanceToLead']=None    ## currently we don't need the Distance_Driven the columns is added for
         df['CumulativeDistanceToLeadPWR2']=None 
+        df['DistanceToLead']=None 
         df = pd.merge(df, Termination, on='SimulationTime', how='outer')
 
     except:
