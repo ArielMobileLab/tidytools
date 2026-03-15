@@ -4,6 +4,8 @@ import numpy as np
 import statistics
 import itertools
 import scipy.signal as sp
+from datetime import datetime
+
 
 ## ---------------------------------------------------------------------------
 def filter_acceleration(x):
@@ -85,14 +87,11 @@ def tidy_cognata(path):
          
 def tidy_engine(path):
     try:
-        #path=r'H:\\My Drive\\Ariel Uni\\C3_020947\\Simulation\\Accompanied\\Far\\EgoCar_Parent_with_out_videos_MapA_2024-08-06_10-41-18.json'
-      
+        #path=r'H:\\My Drive\\Ariel Uni\\A1_016134\\Simulation\\10.FirstResponders\\Teleassist_Latency_150ms_Gap_27m\\EgoCar_Teleassist_Latency_150ms_Gap_27m_2024-11-19_15-13-42.json'
+        #path=FR.KinematicFile[i]
         df=pd.read_json(path)
         df=pd.json_normalize(df['Logs'])
-        
-
-
-       
+           
 ### GPS messages
         GPS=df[df.Type=='GPS']
         GPS=GPS.dropna(axis=1, how='all')
